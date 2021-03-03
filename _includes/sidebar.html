@@ -5,16 +5,16 @@
     {%- else -%}
       {%- assign avatar = site.avatar | relative_url -%}
     {%- endif -%}
-    <img src="{{ avatar }}" class="author-avatar u-photo align-center" alt="{{ site.author }}">
+    <img src="{{ avatar }}" class="user-avatar u-photo align-center" alt="{{ site.user }}">
   </div>
 {%- endif %}
 
 <div class="sidebar-section">
   <ul class="contact-list">
-    {% if site.author -%}
+    {% if site.user -%}
       <li>
         <i class="sidebar-icon fas fa-at"></i>
-        <span class="contact-info p-name">{{ site.author | escape }}</span>
+        <span class="contact-info p-name">{{ site.user | escape }}</span>
       </li>
     {%- endif %}
     {% if site.email -%}
